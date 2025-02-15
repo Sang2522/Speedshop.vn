@@ -1,50 +1,10 @@
-
-/* CSS cho popup */
-.contact-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 800px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: none;
-    z-index: 1000;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 999;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .contact-popup {
-        width: 95%;
-        flex-direction: column;
-    }
-}
-
 .container {
-    background-color: #ffffff;
+    background-color: #ffffff91;
     border-radius: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 body {
     background-color: #F1F1F1;
@@ -52,3 +12,48 @@ body {
     padding-left: 10px;
     padding-right: 10px;
 }
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px; /* Tăng kích thước nút */
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Nền đen trong suốt */
+    border-radius: 50%; /* Bo tròn */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Tăng độ tối khi hover */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 30px; /* Làm icon lớn hơn */
+    height: 30px;
+}
+.card-img-top {
+    height: 350px; /* Giữ cố định chiều cao */
+    object-fit:contain; /* Cắt ảnh để không bị méo */
+    border-radius: 10px; /* Bo góc nhẹ */
+    transition: transform 0.3s ease-in-out; /* Hiệu ứng khi hover */
+}
+
+.card-img-top:hover {
+    transform: scale(1.08); /* Phóng to nhẹ khi hover */
+}
+@media (max-width: 768px) {
+    .carousel-control-prev, 
+    .carousel-control-next {
+        display: none;
+    }
+}
+.navbar-nav .nav-link {
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+

@@ -17,25 +17,24 @@
 
     <body>
         <header>
+            
             <!-- place navbar here -->
             <nav class="navbar navbar-expand-lg bg-clear">
                 <div class="container">
-                    <!-- Logo -->
-                    <a class="navbar-brand px-3" href="#">
-                        <img src="images/Logo.svg" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
-                    </a>
-                    
+                                    <!-- Logo -->
+                 <a class="navbar-brand" href="#">
+                    <img src="images/Logo.svg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+                </a>
                     <!-- Nút Toggle Mobile -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-            
                     <!-- Menu -->
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav me-auto">
                             <!-- Dich vu -->
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-motorcycle"></i>
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dịch vụ
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -46,22 +45,180 @@
                                     <li><a class="dropdown-item" href="#"><i class="fa-solid fa-border-all"></i> Tất cả dịch vụ</a></li>
                                 </ul>
                             </li>
-                            <!-- Lien he -->
-                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa-solid fa-phone-volume"></i> Liên hệ</a>
-                             </li>
+                            <!-- San pham -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                   <img src="images/logo-motul.png" width="100px" alt="">
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><h6 class="dropdown-header">Motor (Xe máy)</h6></li>
+                                    <li><a class="dropdown-item d-flex align-items-center" href="#">
+                                        <img src="images/motul/300v-10w40.webp" width="50px" alt="MOTUL 300V" class="me-2 rounded">
+                                        <div>
+                                          <div>MOTUL 300V ROAD RACING 10W40</div>
+                                          <small class="text-danger fw-bold">420.000đ</small>
+                                        </div>
+                                      </a></li>
+                                    <li><a class="dropdown-item d-flex align-items-center" href="#">
+                                        <img src="images/motul/7100-10w30.webp" width="50px" alt="MOTUL 300V" class="me-2 rounded">
+                                        <div>
+                                          <div>MOTUL 7100 4T 10W30</div>
+                                          <small class="text-danger fw-bold">380.000đ</small>
+                                        </div>
+                                      </a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><h6 class="dropdown-header">Scooter (Tay ga)</h6></li>
+                                    <li><a class="dropdown-item d-flex align-items-center" href="#">
+                                        <img src="images/motul/st-50w40.webp" width="50px" alt="MOTUL 300V" class="me-2 rounded">
+                                        <div>
+                                          <div>MOTUL SCOOTER POWER LE 4T 5W-40</div>
+                                          <small class="text-danger fw-bold">180.000đ</small>
+                                        </div>
+                                      </a></li>
+                                </ul>
+                            </li>
+                            <!-- San pham 2-->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                   <img src="images/logo-fuchs.webp" width="100px" alt="">
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><h6 class="dropdown-header">Motor (Xe máy)</h6></li>
+                                    <li><a class="dropdown-item d-flex align-items-center" href="#">
+                                        <img src="images/fuchs/PRO-4-10W-30-XP-1L.webp" width="50px" alt="Fuchs" class="me-2 rounded">
+                                        <div>
+                                          <div>Pro 4 10W30 XP</div>
+                                          <small class="text-danger fw-bold">320.000đ</small>
+                                        </div>
+                                      </a></li>
+                                    <li><a class="dropdown-item d-flex align-items-center" href="#">
+                                        <img src="images/fuchs/PRO-4-10W-40-1L.webp" width="50px" alt="Fuchs" class="me-2 rounded">
+                                        <div>
+                                          <div>Pro 4 10W40 XP</div>
+                                          <small class="text-danger fw-bold">320.000đ</small>
+                                        </div>
+                                      </a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><h6 class="dropdown-header">Scooter (Tay ga)</h6></li>
+                                    <li><a class="dropdown-item d-flex align-items-center" href="#">
+                                        <img src="images/fuchs/Scoot-Sport-4-5W-40-1L-bottle.webp" width="50px" alt="Fuchs" class="me-2 rounded">
+                                        <div>
+                                          <div>Scoot Sport 4 5W40</div>
+                                          <small class="text-danger fw-bold">230.000đ</small>
+                                        </div>
+                                      </a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-link px-3">Liên hệ</li>
                         </ul>
-                         <!-- Thanh Tìm Kiếm -->
-          <!-- Thanh tìm kiếm -->
-          <form id="searchForm" class="d-flex ms-3 mx-3 mt-3 mb-3">
-            <input id="searchInput" class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
-            <button class="btn btn-primary" type="submit">Tìm</button>
-        </form>
+                        <!-- Thanh tìm kiếm -->
+                <form id="searchForm" class="d-flex px-2">
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Tìm</button>
+                    </form>
                     </div>
                 </div>
             </nav>
         </header>
         <main>
+            <div class="container">
+                <h2 class="text-center mb-4 mt-3" style="font-weight: 700;">Sản phẩm nổi bật</h2>
+              
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                  
+                  <div class="carousel-inner">
+                    
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                      <div class="row">
+                        <div class="col-12 col-md-3">
+                          <div class="card">
+                            <img src="images/motul/300v-10w40.webp" class="card-img-top" alt="MOTUL 300V">
+                            <div class="card-body">
+                              <h5 class="card-title">MOTUL 300V 10W40</h5>
+                              <p class="card-text text-danger fw-bold">420.000đ</p>
+                              <p class="card-text"><strong>Phân loại:</strong> MOTOR</p>
+                              <a href="detail.html?id=1" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                          </div>
+                        </div>
+              
+                        <div class="col-12 col-md-3">
+                          <div class="card">
+                            <img src="images/motul/7100-10w30.webp" class="card-img-top" alt="MOTUL 7100">
+                            <div class="card-body">
+                              <h5 class="card-title">MOTUL 7100 4T 10W30</h5>
+                              <p class="card-text text-danger fw-bold">380.000đ</p>
+                              <p class="card-text"><strong>Phân loại:</strong> MOTOR</p>
+                              <a href="detail.html?id=2" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                          </div>
+                        </div>
+              
+                        <div class="col-12 col-md-3">
+                          <div class="card">
+                            <img src="images/motul/st-50w40.webp" class="card-img-top" alt="MOTUL SCOOTER">
+                            <div class="card-body">
+                              <h5 class="card-title">MOTUL SCOOTER 4T 5W-40</h5>
+                              <p class="card-text text-danger fw-bold">180.000đ</p>
+                              <p class="card-text"><strong>Phân loại:</strong> SCOOTER</p>
+                              <a href="detail.html?id=3" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                          </div>
+                        </div>
+              
+                        <div class="col-12 col-md-3">
+                          <div class="card">
+                            <img src="images/fuchs/PRO-4-10W-30-XP-1L.webp" class="card-img-top" alt="FUCHS">
+                            <div class="card-body">
+                              <h5 class="card-title">PRO-4-10W-30</h5>
+                              <p class="card-text text-danger fw-bold">320.000đ</p>
+                              <p class="card-text"><strong>Phân loại:</strong> MOTOR</p>
+                              <a href="detail.html?id=4" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                      <div class="row">
+                        <div class="col-12 col-md-3">
+                          <div class="card">
+                            <img src="images/fuchs/PRO-4-10W-40-1L.webp" class="card-img-top" alt="FUCHS">
+                            <div class="card-body">
+                              <h5 class="card-title">PRO-4-10W-40-1L</h5>
+                              <p class="card-text text-danger fw-bold">320.000đ</p>
+                              <p class="card-text"><strong>Phân loại:</strong> MOTOR</p>
+                              <a href="detail.html?id=5" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                          </div>
+                        </div>
+              
+                        <div class="col-12 col-md-3">
+                          <div class="card">
+                            <img src="images/fuchs/Scoot-Sport-4-5W-40-1L-bottle.webp" class="card-img-top" alt="FUCHS">
+                            <div class="card-body">
+                              <h5 class="card-title">Scoot-Sport-4-5W-40-1L</h5>
+                              <p class="card-text text-danger fw-bold">230.000đ</p>
+                              <p class="card-text"><strong>Phân loại:</strong> SCOOTER</p>
+                              <a href="detail.html?id=6" class="btn btn-primary">Xem chi tiết</a>
+                            </div>
+                          </div>
+                        </div>
+              
+                  </div>
+              
+                </div>
+              </div>
+                <!-- Nút điều hướng -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+    <i class="fa-solid fa-play fa-flip-horizontal"></i>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+    <i class="fa-solid fa-play"></i>
+  </button>
 
         </main>
         <footer>
@@ -80,7 +237,7 @@
             crossorigin="anonymous"
         ></script>
 
-        <!-- Search-->
+        <!-- Search -->
         <script>
             document.getElementById("searchForm").addEventListener("submit", function(event) {
                 event.preventDefault();

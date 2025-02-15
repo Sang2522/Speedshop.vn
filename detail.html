@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chi tiết sản phẩm</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #productImage {
+            max-width: 100%;
+            max-height: 400px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .product-table {
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .product-table th {
+            background: #343a40;
+            color: white;
+            text-align: left;
+            padding: 10px;
+        }
+        .product-table td {
+            padding: 10px;
+        }
+        .description-container {
+            position: relative;
+        }
+        .description-text {
+            max-height: 100px;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .description-text.expanded {
+            max-height: none;
+        }
+        .toggle-btn {
+            display: block;
+            color: #343a40;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+         <!-- place navbar here -->
+         <nav class="navbar navbar-expand-lg bg-clear">
+          <div class="container">
+                              <!-- Logo -->
+           <a class="navbar-brand" href="index.html">
+              <img src="images/Logo.svg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+          </a>
+              <!-- Nút Toggle Mobile -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- Menu -->
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav me-auto">
+                      <!-- Dich vu -->
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Dịch vụ
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-oil-can"></i> Oil change (Thay nhớt xe máy)</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-person-booth"></i> Detailing motorcycle (Rửa xe chi tiết)</a></li>
+                              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-hand-sparkles"></i> Motor Accessories (Phụ kiện xe máy)</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-border-all"></i> Tất cả dịch vụ</a></li>
+                          </ul>
+                      </li>
+                      <!-- San pham -->
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             <img src="images/logo-motul.png" width="100px" alt="">
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><h6 class="dropdown-header">Motor (Xe máy)</h6></li>
+                              <li><a class="dropdown-item d-flex align-items-center" href="#">
+                                  <img src="images/motul/300v-10w40.webp" width="50px" alt="MOTUL 300V" class="me-2 rounded">
+                                  <div>
+                                    <div>MOTUL 300V ROAD RACING 10W40</div>
+                                    <small class="text-danger fw-bold">420.000đ</small>
+                                  </div>
+                                </a></li>
+                              <li><a class="dropdown-item d-flex align-items-center" href="#">
+                                  <img src="images/motul/7100-10w30.webp" width="50px" alt="MOTUL 300V" class="me-2 rounded">
+                                  <div>
+                                    <div>MOTUL 7100 4T 10W30</div>
+                                    <small class="text-danger fw-bold">380.000đ</small>
+                                  </div>
+                                </a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><h6 class="dropdown-header">Scooter (Tay ga)</h6></li>
+                              <li><a class="dropdown-item d-flex align-items-center" href="#">
+                                  <img src="images/motul/st-50w40.webp" width="50px" alt="MOTUL 300V" class="me-2 rounded">
+                                  <div>
+                                    <div>MOTUL SCOOTER POWER LE 4T 5W-40</div>
+                                    <small class="text-danger fw-bold">180.000đ</small>
+                                  </div>
+                                </a></li>
+                          </ul>
+                      </li>
+                      <!-- San pham 2-->
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             <img src="images/logo-fuchs.webp" width="100px" alt="">
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <li><h6 class="dropdown-header">Motor (Xe máy)</h6></li>
+                              <li><a class="dropdown-item d-flex align-items-center" href="#">
+                                  <img src="images/fuchs/PRO-4-10W-30-XP-1L.webp" width="50px" alt="Fuchs" class="me-2 rounded">
+                                  <div>
+                                    <div>Pro 4 10W30 XP</div>
+                                    <small class="text-danger fw-bold">320.000đ</small>
+                                  </div>
+                                </a></li>
+                              <li><a class="dropdown-item d-flex align-items-center" href="#">
+                                  <img src="images/fuchs/PRO-4-10W-40-1L.webp" width="50px" alt="Fuchs" class="me-2 rounded">
+                                  <div>
+                                    <div>Pro 4 10W40 XP</div>
+                                    <small class="text-danger fw-bold">320.000đ</small>
+                                  </div>
+                                </a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><h6 class="dropdown-header">Scooter (Tay ga)</h6></li>
+                              <li><a class="dropdown-item d-flex align-items-center" href="#">
+                                  <img src="images/fuchs/Scoot-Sport-4-5W-40-1L-bottle.webp" width="50px" alt="Fuchs" class="me-2 rounded">
+                                  <div>
+                                    <div>Scoot Sport 4 5W40</div>
+                                    <small class="text-danger fw-bold">230.000đ</small>
+                                  </div>
+                                </a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-link px-3">Liên hệ</li>
+                  </ul>
+                  <!-- Thanh tìm kiếm -->
+          <form id="searchForm" class="d-flex px-2">
+              <input id="searchInput" class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+              <button class="btn btn-outline-primary" type="submit">Tìm</button>
+              </form>
+              </div>
+          </div>
+      </nav>
+    </header>
+    <main>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img id="productImage" src="" class="img-fluid rounded" alt="Chi tiết sản phẩm">
+                </div>
+                <div class="col-md-6">
+                    <h2 id="productName"></h2>
+                    <p class="text-danger fw-bold" id="productPrice"></p>
+                    <p class="text-secondary fw-bold">Phân loại: <span id="productCategory"></span></p>
+                    <table class="table table-bordered product-table">
+                        <tbody>
+                            <tr><th>Ứng dụng</th><td id="productApplication"></td></tr>
+                            <tr><th>Loại động cơ</th><td id="productEngineType"></td></tr>
+                            <tr><th>Độ nhớt</th><td id="productViscosity"></td></tr>
+                            <tr><th>Mô tả</th><td>
+                                <div class="description-container">
+                                    <p id="productDescription" class="description-text"></p>
+                                </div>
+                            </td></tr>
+                        </tbody>
+                    </table>
+                    <button class="btn btn-dark">Mua ngay</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="text-center py-4">&copy; 2025 Dầu Nhớt Nhập Khẩu</footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get("id");
+            const products = {
+                "1": { name: "MOTUL 300V 10W40", price: "420.000đ", image: "images/motul/300v-10w40.webp", description: "Dầu nhớt 100% tổng hợp gốc Ester dành cho xe máy 4 thì công suất cao như xe thể thao, xe đường trường, xe đường phố, xe địa hình, xe Enduro có hoặc không tích hợp hộp số, ly hợp khô hoặc ướt, động cơ đáp ứng tiêu chuẩn Euro 2 hoặc Euro 3, được trang bị hệ thống xử lý khí thải như bộ chuyển đổi khí thải xúc tác, bộ nạp khí vào ống xả. Khuyến nghị sử dụng đặc biệt cho các động cơ HONDA, YAMAHA yêu cầu cấp độ nhớt SAE 10W-30. Cũng có thể sử dụng cho xe đường phố không trang bị bộ xử lý khí thải, xe tay ga, xe ATV, xe UTV.", application: "Motor Engine", engineType: "4T", category: "MOTOR", viscosity: "10W-40" },
+                "2": { name: "MOTUL 7100 4T 10W30", price: "380.000đ", image: "images/motul/7100-10w30.webp", description: "Dầu nhớt 100% tổng hợp gốc Ester dành cho xe máy 4 thì công suất cao như xe thể thao, xe đường trường, xe đường phố, xe địa hình, xe Enduro có hoặc không tích hợp hộp số, ly hợp khô hoặc ướt, động cơ đáp ứng tiêu chuẩn Euro 2 hoặc Euro 3, được trang bị hệ thống xử lý khí thải như bộ chuyển đổi khí thải xúc tác, bộ nạp khí vào ống xả. Khuyến nghị sử dụng đặc biệt cho các động cơ HONDA, YAMAHA yêu cầu cấp độ nhớt SAE 10W-30. Cũng có thể sử dụng cho xe đường phố không trang bị bộ xử lý khí thải, xe tay ga, xe ATV, xe UTV.", application: "Motor Engine", engineType: "4T", category: "MOTOR", viscosity: "10W-30" },
+                "3": { name: "MOTUL SCOOTER 4T 5W-40", price: "180.000đ", image: "images/motul/st-50w40.webp", description: "Dầu nhớt 100% tổng hợp, hiệu suất cao, xả thải thấp dành cho động cơ 4 thì đời mới trong các loại xe tay ga phân khối lớn, được nhà sản xuất khuyên dùng dầu đạt tiêu chuẩn JASO MB. Sản phẩm giúp kiểm soát hiệu quả quá trình đóng cặn, mài mòn và ăn mòn vòng bi ở pít-tông. Sản phẩm phù hợp trong mọi điều kiện lái xe: đường trong thành phố, cao tốc. Chú ý: Không phù hợp với động cơ mô tô 4T.", application: "Scooter Engine", engineType: "4T", category: "SCOOTER", viscosity: "5W-40" },
+                "4": { name: "PRO-4-10W-30", price: "320.000đ", image: "images/fuchs/PRO-4-10W-30-XP-1L.webp", description: "Fuchs Silkolene Pro 4 10W30 XP là dầu nhớt động cơ tổng hợp hoàn toàn sử dụng công nghệ XP. Thích hợp sử dụng cho các dòng xe tay côn, xe có công suất cao và hoạt động ở điều kiện khắc nghiệt.", application: "Engine", engineType: "4T", category: "MOTOR", viscosity: "10W-30" },
+                "5": { name: "PRO-4-10W-40-1L", price: "320.000đ", image: "images/fuchs/PRO-4-10W-40-1L.webp", description: "Fuchs Silkolene Pro 4 10W40 XP là dầu nhớt động cơ tổng hợp hoàn toàn sử dụng công nghệ XP. Thích hợp sử dụng cho các dòng xe tay côn, xe có công suất cao và hoạt động ở điều kiện khắc nghiệt.", application: "Engine", engineType: "4T", category: "MOTOR", viscosity: "10W-40" },
+                "6": { name: "Scoot-Sport-4-5W-40-1L", price: "230.000đ", image: "images/fuchs/Scoot-Sport-4-5W-40-1L-bottle.webp", description: "Dầu nhớt 100% tổng hợp, hiệu suất cao, xả thải thấp dành cho động cơ 4 thì đời mới trong các loại xe tay ga phân khối lớn, được nhà sản xuất khuyên dùng dầu đạt tiêu chuẩn JASO MB. Sản phẩm giúp kiểm soát hiệu quả quá trình đóng cặn, mài mòn và ăn mòn vòng bi ở pít-tông. Sản phẩm phù hợp trong mọi điều kiện lái xe: đường trong thành phố, cao tốc. Chú ý: Không phù hợp với động cơ mô tô 4T.", application: "Scooter Engine", engineType: "4T", category: "SCOOTER", viscosity: "5W-40" }
+            };
+            
+            if (productId && products[productId]) {
+                const product = products[productId];
+                document.getElementById("productName").textContent = product.name;
+                document.getElementById("productPrice").textContent = product.price;
+                document.getElementById("productImage").src = product.image;
+                document.getElementById("productDescription").textContent = product.description;
+                document.getElementById("productApplication").textContent = product.application;
+                document.getElementById("productEngineType").textContent = product.engineType;
+                document.getElementById("productCategory").textContent = product.category;
+                document.getElementById("productViscosity").textContent = product.viscosity;
+            }
+        });
+    </script>
+</body>
+</html>
