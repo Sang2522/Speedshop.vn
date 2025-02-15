@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Dầu nhớt nhập khẩu</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"crossorigin="anonymous"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <!-- place navbar here -->
+            <nav class="navbar navbar-expand-lg bg-clear">
+                <div class="container">
+                    <!-- Logo -->
+                    <a class="navbar-brand px-3" href="#">
+                        <img src="images/Logo.svg" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
+                    </a>
+                    
+                    <!-- Nút Toggle Mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                    <!-- Menu -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <!-- Dich vu -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-motorcycle"></i>
+                                    Dịch vụ
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-oil-can"></i> Oil change (Thay nhớt xe máy)</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-person-booth"></i> Detailing motorcycle (Rửa xe chi tiết)</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-hand-sparkles"></i> Motor Accessories (Phụ kiện xe máy)</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-border-all"></i> Tất cả dịch vụ</a></li>
+                                </ul>
+                            </li>
+                            <!-- Lien he -->
+                             <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-solid fa-phone-volume"></i> Liên hệ</a>
+                             </li>
+                        </ul>
+                         <!-- Thanh Tìm Kiếm -->
+          <!-- Thanh tìm kiếm -->
+          <form id="searchForm" class="d-flex ms-3 mx-3 mt-3 mb-3">
+            <input id="searchInput" class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+            <button class="btn btn-primary" type="submit">Tìm</button>
+        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Search-->
+        <script>
+            document.getElementById("searchForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                let query = document.getElementById("searchInput").value.trim();
+                if (query) {
+                    window.location.href = "search.html?q=" + encodeURIComponent(query);
+                } else {
+                    alert("Vui lòng nhập từ khóa!");
+                }
+            });
+        </script>
+    </body>
+</html>
